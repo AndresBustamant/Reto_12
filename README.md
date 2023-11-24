@@ -106,4 +106,5 @@ resultado = texto.isupper()  # Verifica si el string esta en mayusculas
 print(resultado)  # Esto imprimirá True
 ```
 
-**_2. a_**
+**_2. Procesar el archivo y extraer:_**
+

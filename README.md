@@ -1,4 +1,6 @@
 # Reto_12
+1.Consulte que hacen los siguientes métodos de strings en python:
+
 -endswith
 
 -startswith
@@ -16,3 +18,5 @@
 -islower
 
 -isupper
+
+1.

@@ -1,5 +1,5 @@
 # Reto_12
-1. Consulte que hacen los siguientes métodos de strings en python:
+1. **_Consulte que hacen los siguientes métodos de strings en python_**:
 
 -endswith
 

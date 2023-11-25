@@ -108,3 +108,63 @@ print(resultado)  # Esto imprimirá True
 
 **_2. Procesar el archivo y extraer:_**
 
+-cantidad de vocales:
+
+```pseudocode
+def contar_vocales(texto: str): #definicion e una funcion para el conteo de vocales
+  n_vocales=0 #conteo
+  for letra in texto:
+    if letra in "aeiouAEIOU"  #criterio para aumentar el conteo
+      n_vocales+=1
+    return n_vocales
+
+with open("mbox-short.txt", 'r') as archivo: #apertura del archivo para trabajarlo como una variable
+  texto= archivo.read()
+
+cantidad_vocales= contar_vocales(texto) #aplicacion de la funcion a la variable texto
+
+print("la cantidad de vocales es igual a: "+ str(cantidad_vocales))
+```
+-cantidad de consonantes:
+
+```pseudocode
+def contar_consonantes(texto: str):   #definicion de una funcion para el conteo de consonantes
+  consonantes=0  #conteo
+  for letra in texto:
+    if letra.isalpha()  and letra not in  "aeiouAEIOU" #parametro para aumentar el contei
+      n_consonantes+=1
+    return n_vocales
+
+with open("mbox-short.txt", 'r') as archivo: #apertura del archivo para trabajarlo como una variable
+  texto= archivo.read()
+
+cantidad_consonantes= contar_consonantes(texto) #aplicacion de la funcion a la vaiable texto
+
+print("la cantidad de vocales es igual a: "+ str(cantidad_consonantes))
+```
+-listado de las 50 palabras que mas se repiten:
+
+```pseudocode
+def palabras_repetidas(texto: str):   #definicion de una funcion para el conteo de palabras
+  texto= texto.lower()   #convierte el texto a minuscula para evalauarlo de manera uniforme
+
+  numero_palabras:{}  #se crea un diccionario con el fin de evidenciar la ocurrencia de las palabras
+
+  for l in texto:  #se reemplazan los espacias y la simbologia no alfabetica
+    if not l.isalpha() and != " ":
+      texto= texto.replace(l, " ")
+
+  archivo = texto.split()  #se divide el texto en palabras individuales
+
+  for t in archivo:    #se genera un ciclo para contar las ocurrencias de las palabras
+    if t not in numero_palabras:  #si la palabra no esta en el diccionario se evalua
+      numero_de_palabras[t]=0
+    numero_de_palabras[t] +=1 #incrementa con cada ocurrencia
+
+  for l in sorted(numero_de_palabras, reverse=True, key=lambda l: numero_de_palabras[s]):[:51]:
+    print("La palabra: {} \tSe repite {} \tveces en el archivo".format(l, numero_de_palabras[l])) #se indica la lectura de las 50 primeras ocurrencias
+
+with open("mbox-short.txt", 'r') as file: #se abre el archivo en tipo lectura para trabajarlo como una variable
+  txt = file.read()
+  palabras_repetidas(txt) #se llama la funcion para aplicarla a el archivo
+```
